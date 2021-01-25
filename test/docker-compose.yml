@@ -1,0 +1,10 @@
+services:
+  test:
+    image: gui_test
+    environment:
+      - DISPLAY
+    user: ${UID}:${GID}
+    build: .
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - $HOME/.Xauthority:/root/.Xauthority:rw

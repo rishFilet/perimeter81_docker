@@ -1,0 +1,9 @@
+gconf2
+gconf-service
+libnotify4
+libxtst6
+libnss3
+iptables
+openssl
+net-tools
+traceroute

@@ -1,0 +1,12 @@
+services:
+  perimeter81_launch:
+    image: perimeter81_vpn
+    user: ${UID}:${GID}
+    build: .
+    environment:
+      - DISPLAY
+    security_opt:
+      - seccomp:unconfined
+    volumes:
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
